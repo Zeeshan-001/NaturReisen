@@ -51,7 +51,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -68,7 +69,7 @@ html {
       html body {
         padding: 0; } }
   html ::selection {
-    background-color: #55abc5;
+    background-color: #09b935;
     color: #fff; }
 
 body {
@@ -126,7 +127,6 @@ body {
     .heading-secondary {
       font-size: 2.5rem; } }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -208,10 +208,10 @@ body {
     background-color: #fff; }
 
 .btn--green {
-  background-color: #55abc5;
+  background-color: #09b935;
   color: #fff; }
   .btn--green::after {
-    background-color: #55abc5; }
+    background-color: #09b935; }
 
 .btn::after {
   content: "";
@@ -231,15 +231,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #55abc5;
+  color: #09b935;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55abc5;
+  border-bottom: 1px solid #09b935;
   padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
-  background-color: #55abc5;
+  background-color: #09b935;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -270,7 +270,7 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #7d36f0, #ec481f); }
+        background-image: linear-gradient(to right bottom, #7d36f0, #ff5930); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #6f9bd5, #5c38af); }
       .card__side--back-3 {
@@ -288,7 +288,7 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #7d36f0, #ec481f), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #7d36f0, #ff5930), url(../img/nat-5.jpg); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #6f9bd5, #5c38af), url(../img/nat-6.jpg); }
     .card__picture--3 {
@@ -308,7 +308,7 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(125, 54, 240, 0.85), rgba(236, 72, 31, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(125, 54, 240, 0.85), rgba(255, 89, 48, 0.85)); }
     .card__heading-span--2 {
       background-image: linear-gradient(to right bottom, rgba(111, 155, 213, 0.85), rgba(92, 56, 175, 0.85)); }
     .card__heading-span--3 {
@@ -411,7 +411,7 @@ body {
           left: 0;
           transform: scale(1.1); } }
     .composition__photo:hover {
-      outline: 0.5rem solid #55abc5;
+      outline: 0.5rem solid #09b935;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -463,9 +463,9 @@ body {
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #55abc5; }
+    border-bottom: 3px solid #09b935; }
   .form__input:focus:invalid {
-    border-bottom: 3px solid #ec481f; }
+    border-bottom: 3px solid #ff5930; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
 
@@ -502,7 +502,7 @@ body {
 .form__radio-button {
   height: 3rem;
   width: 3rem;
-  border: 5px solid #55abc5;
+  border: 5px solid #09b935;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -518,7 +518,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #55abc5;
+    background-color: #09b935;
     opacity: 0;
     transition: opacity .2s; }
 
@@ -596,7 +596,7 @@ body {
     transition: all .2s;
     line-height: 1; }
   .popup__close:hover {
-    color: #55abc5; }
+    color: #09b935; }
 
 .story {
   width: 75%;
@@ -673,13 +673,15 @@ body {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
-    margin-bottom: 8rem; }
+    margin-bottom: 8rem;
+    height: 6rem;
+    width: auto; }
     @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 6rem; } }
-  .footer__logo {
-    width: 15rem;
-    height: auto; }
+    .footer__logo-box img {
+      width: 6rem;
+      height: auto; }
   .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
@@ -700,11 +702,10 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .footer__link:hover, .footer__link:active {
-    color: #55abc5;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: rotate(5deg) scale(1.3); }
+    color: #09b935;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .footer__copyright {
     border-top: 1px solid #777;
     padding-top: 2rem;
@@ -868,7 +869,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #55abc5;
+  color: #09b935;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -915,14 +916,14 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 20rem 0;
+  padding: 22rem 0;
   margin-top: -20vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
 
 .section-features {
-  padding: 12rem 0;
+  padding: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(111, 155, 213, 0.8), rgba(92, 56, 175, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
@@ -935,7 +936,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 15rem 0 10rem 0;
+  padding: 18rem 0 10rem 0;
   margin-top: -10rem; }
   @media only screen and (max-width: 56.25em) {
     .section-tours {

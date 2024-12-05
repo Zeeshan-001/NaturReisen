@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
 
+    <script defer src="/index.js"></script>
+
     <!--<link rel="stylesheet" href="css/icon-font.css">-->
 
     <link rel="stylesheet" href="css/style.css" />
@@ -31,29 +33,33 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span>Über Natours</a>
+            <a href="#home" class="navigation__link">Home</a>
           </li>
+
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>02</span>Deine Vorteile</a
-            >
+            <a href="#about" class="navigation__link">Über Natours</a>
           </li>
+
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>03</span>Beliebte Touren</a
-            >
+            <a href="#benefits" class="navigation__link">Deine Vorteile</a>
           </li>
+
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span>Geschichten</a>
+            <a href="#tours" class="navigation__link">Beliebte Touren</a>
           </li>
+
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>05</span>Jetzt buchen</a>
+            <a href="#stories" class="navigation__link">Geschichten</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="#booking" class="navigation__link">Jetzt buchen</a>
           </li>
         </ul>
       </nav>
     </div>
     <!-- Main Header -->
-    <header class="header">
+    <header id="home" class="header">
       <div class="header__text-box">
         <h1 class="heading-primary">
           <span class="heading-primary--main">Natorreisen</span>
@@ -62,7 +68,7 @@
           >
         </h1>
 
-        <a href="#section-tours" class="btn btn--white btn--animated"
+        <a href="#tours" class="btn btn--white btn--animated"
           >Unsere Touren entdecken</a
         >
       </div>
@@ -70,7 +76,7 @@
 
     <main>
       <!-- Section About-Naturreisen -->
-      <section class="section-about">
+      <section id="about" class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Spannende Touren für abenteuerlustige Menschen
@@ -129,66 +135,64 @@
       </section>
 
       <!-- Section Features -->
-      <section class="section-about">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Spannende Touren für abenteuerlustige Menschen
-          </h2>
-        </div>
-
+      <section id="benefits" class="section-features">
         <div class="row">
-          <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Du wirst dich in die Natur verlieben
-            </h3>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
-              quam nisi exercitationem omnis earum qui.
-            </p>
-
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Erlebe Abenteuer wie nie zuvor
-            </h3>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores nulla deserunt voluptatum nam.
-            </p>
-
-            <a href="#" class="btn-text">Mehr erfahren &rarr;</a>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Erkunde die Welt
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
           </div>
-          <div class="col-1-of-2">
-            <div class="composition">
-              <img
-                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Foto 1"
-                class="composition__photo composition__photo--p1"
-                src="img/nat-1-large.jpg"
-              />
 
-              <img
-                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Foto 2"
-                class="composition__photo composition__photo--p2"
-                src="img/nat-2-large.jpg"
-              />
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Treffe die Natur
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
 
-              <img
-                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Foto 3"
-                class="composition__photo composition__photo--p3"
-                src="img/nat-3-large.jpg"
-              />
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Finde deinen Weg
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Leb ein gesünderes Leben
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Section Tours -->
-      <section class="section-tours" id="section-tours">
+      <section id="tours" class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Die beliebtesten Touren</h2>
         </div>
@@ -294,7 +298,7 @@
       </section>
 
       <!-- Section Stories -->
-      <section class="section-stories">
+      <section id="stories" class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -317,7 +321,7 @@
                 alt="Person auf einer Tour"
                 class="story__img"
               />
-              <figcaption class="story__caption">Mary Smith</figcaption>
+              <figcaption class="story__caption">Michael</figcaption>
             </figure>
             <div class="story__text">
               <h3 class="heading-tertiary u-margin-bottom-small">
@@ -342,7 +346,7 @@
                 alt="Person auf einer Tour"
                 class="story__img"
               />
-              <figcaption class="story__caption">Jack Wilson</figcaption>
+              <figcaption class="story__caption">Martin</figcaption>
             </figure>
             <div class="story__text">
               <h3 class="heading-tertiary u-margin-bottom-small">
@@ -365,7 +369,7 @@
       </section>
 
       <!-- Section Booking -->
-      <section class="section-book">
+      <section id="booking" class="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -442,13 +446,6 @@
     <footer class="footer">
       <div class="footer__logo-box">
         <picture class="footer__logo">
-          <source
-            srcset="
-              img/logo-green-small-1x.png 1x,
-              img/logo-green-small-2x.png 2x
-            "
-            media="(max-width: 37.5em)"
-          />
           <img alt="Vollständiges Logo" src="img/favicon.png" />
         </picture>
       </div>
